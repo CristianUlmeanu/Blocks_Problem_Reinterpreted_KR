@@ -7,6 +7,8 @@ Avem un set de stive de blocuri. Se considera ca fiecare bloc estes fie bloc fie
 
 Exemplu de stare initiala:
 
+![alt text](https://github.com/CristianUlmeanu/Blocks_Problem_Reinterpreted_KR/blob/local/RequirmentsPics/pb-blocuri-soareci-si-pisici(initiala).png?raw=true)
+
 configuratie initiala
 Mutarea blocurilor se face cu urmatoarele restrictii si efecte:
 
@@ -15,6 +17,8 @@ o pisică sătulă nu mai manâncă șoareci. O pisică devine sătulă după ce
 nu putem muta un bloc pisica peste alt bloc pisica, decat daca una dintre pisici este satula (altfel se iau la bataie)
 blocurile soareci pot fi plasate fara restrictii
 Exemplu de stare după o mutare:
+
+![alt text](https://github.com/CristianUlmeanu/Blocks_Problem_Reinterpreted_KR/blob/local/RequirmentsPics/pb-blocuri-soareci-si-pisici(dupa%20o%20mutare).png?raw=true)
 
 configuratie initiala
 Costul mutării unui bloc este 3 pentru pisica satula, 2 pentru pisica flamanda si 1 pentru soareci.
@@ -31,13 +35,14 @@ informația dintr-un bloc va avea forma: identificator:tip, unde tip poate avea 
 Stivele vide se evidențiază prin simbolul "=".
 De exemplu, pentru starea inițială dată ca exemplu:
 
-configuratie
-fișierul de intrare ar fi:
-1:s#4:pf
-5:s#2:s#3:pf
-9:ps#7:s#6:s
-10:s#8:s
-12:pf#13:s#11:ps
+![alt text](https://github.com/CristianUlmeanu/Blocks_Problem_Reinterpreted_KR/blob/local/RequirmentsPics/pb-blocuri-soareci-si-pisici(initiala)%20(1).png?raw=true)
+
+fișierul de intrare ar fi:<br />
+1:s#4:pf<br />
+5:s#2:s#3:pf<br />
+9:ps#7:s#6:s<br />
+10:s#8:s<br />
+12:pf#13:s#11:ps<br />
 Model fișier output. O stare în fișierul de output se va reprezenta afișând stivele de sus în jos, toate aliniate la bază. Afișarea unei configurații va avea un număr de rânduri egal cu înălțimea celei mai înalte stive. Dacă o stivă nu ajunge pănă la un anumit nivel în locul în care trebuia afișat blocul ei se vor pune spații (deci, dacă e cazul într-o stare finală, pentru stivă vidă vom avea spațiu începând cu cel mai de jos nivel). Un bloc pe stivă se va afișa în formatul [tip:numar] . Între două stive se va afișa o coloană de spații. Toate blocurile dintr-o stivă încep de la aceeași coloană în zona de afișare. Sub fiecare configurație se va afișa o linie de simboluri "#"(hashtag) care începe de sub prima stivă și se termină la ultima.
 
 în afișarea drumului, configurațiile (nodurile) apar în ordine cronologică, numerotate (cu indice între 1 si ND, unde ND e numărul de noduri din drum). Se afișează pe o linie separată indicele și dedesubt configurația corespunzătoare.
@@ -46,13 +51,16 @@ Model fișier output. O stare în fișierul de output se va reprezenta afișând
 
 De exemplu, pentru configurația de mai jos (care e starea inițială corespunzătoare fișierului de intrare dat caexemplu; de acolo s-au luat si identificatorii), dacă ar fi un nod în fișierul de output:
 
+![alt text](https://github.com/CristianUlmeanu/Blocks_Problem_Reinterpreted_KR/blob/local/RequirmentsPics/pb-blocuri-soareci-si-pisici(finala).png?raw=true)
+
 configuratie
 presupunând ca e primul nod într-un drum, am avea:
-1)
-        [pf: 3] [ s: 6]         [ps:11]
-[pf: 4] [ s: 2] [ s: 7] [ s: 8] [ s:13]
-[ s: 1] [ s: 5] [ps: 9] [ s:10] [pf:12]
-#######################################
+1)<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  [pf: 3] [&nbsp; s: 6]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ps:11]<br />
+[pf: 4] [&nbsp; s: 2] [&nbsp; s: 7] [ s:&nbsp; 8] [&nbsp; s:13]<br />
+[&nbsp; s: 1] [&nbsp; s: 5] [ps: 9] [ s:10] [pf:12]<br />
+#######################################<br />
 Pentru o aliniere ușoară, puteți considera că identificatorul nu are mai mult de 2 caractere (nu se vor da mai mult de 100 de blocuri într-o configurație).
 
 Atenție, aici e exemplu pentru un singur nod; voi trebuie să afisați toate nodurile din drumul soluție în acest format.
