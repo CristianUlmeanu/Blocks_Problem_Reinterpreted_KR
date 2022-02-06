@@ -1,0 +1,4 @@
+
+Observatie: stivele sunt afisate pe orizontala, cu baza la stanga si varful la dreapta.
+##################
+Solutii obtinute cu A*:
