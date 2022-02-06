@@ -65,7 +65,7 @@ Pentru o aliniere ușoară, puteți considera că identificatorul nu are mai mul
 
 Atenție, aici e exemplu pentru un singur nod; voi trebuie să afisați toate nodurile din drumul soluție în acest format.
 
-# Requirments
+# Requirements
 
  1. Fișierele de input vor fi într-un folder a cărui cale va fi dată în linia de comanda. În linia de comandă se va da și calea pentru un folder de output în care programul va crea pentru fiecare fișier de input, fișierul sau fișierele cu rezultatele. Tot în linia de comandă se va da ca parametru și numărul de soluții de calculat (de exemplu, vrem primele NSOL=4 soluții returnate de fiecare algoritm). Ultimul parametru va fi timpul de timeout. Se va descrie în documentație forma în care se apelează programul, plus 1-2 exemple de apel.
  2. Citirea din fisier + memorarea starii. Parsarea fișierului de input care respectă formatul cerut în enunț
